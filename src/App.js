@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import CountrySelector from './components/CountrySelector';
 import Highlight from './components/Highlight';
 import Summary from './components/Summary';

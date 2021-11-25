@@ -1,37 +1,37 @@
 import React from 'react'
-import { Grid,Button,Typography,Card,CardContent,CardMedia,CardActions,Link,makeStyles } from '@material-ui/core'
+import { Grid,Button,Typography,Card,CardContent,CardMedia,CardActions,Link } from '@material-ui/core'
 import news from '../images/img1.jpg'
 
 export const News = () => {
-    const useStyle = makeStyles({
-        wrapper: (props) => ({
+    // const useStyle = makeStyles({
+    //     wrapper: (props) => ({
             
-        }),
-        header: (props) => ({
-            fontSize: '18px',
-            fontWeight: '600',
-            padding: '20px',
-            borderRadius: '4px',
+    //     }),
+    //     header: (props) => ({
+    //         fontSize: '18px',
+    //         fontWeight: '600',
+    //         padding: '20px',
+    //         borderRadius: '4px',
            
-        }),
-        time: {
-            color: '#6a6a6a',
-            fontSize: '12px',
-        },
-        title: (props) => ({
+    //     }),
+    //     time: {
+    //         color: '#6a6a6a',
+    //         fontSize: '12px',
+    //     },
+    //     title: (props) => ({
            
-        }),
-        content: (props) => ({
+    //     }),
+    //     content: (props) => ({
            
-        }),
-        link: (props) => ({
+    //     }),
+    //     link: (props) => ({
            
-            fontWeight: '700'
-        }),
-        situation: (props) => ({
+    //         fontWeight: '700'
+    //     }),
+    //     situation: (props) => ({
             
-        })
-    })
+    //     })
+    // })
     return (
         <>
             <Grid container spacing={3}>

@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react'
+import React from 'react'
 import { 
     Grid,
     List,
@@ -7,49 +7,49 @@ import {
     ListItemAvatar,
     Avatar,
     Typography,
-    makeStyles 
+    // makeStyles 
 } from '@material-ui/core'
 
 const TopTenList = ({ data,type }) => {
-    const useStyle = makeStyles({
-        title: (props) => ({
-            textAlign: 'left',
-            fontSize: '20px',
-            fontWeight: 'bold',
-            fontFamily: 'Roboto,san-serif',
-            marginBottom: '10px',
-        }),
-        number: (props) => ({
-            textAlign: 'right',
-            '& span': {
-                fontSize: '14px',
-            }
-        }),
-        itemWrapper: (props) => ({
-            marginBottom: '10px',
-            borderRadius: '0px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-        }),
-        fixFlag: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'initial',
-        },
-        text: (props) => ({
-            marginTop: '5px',
-            '& span': {
-                fontSize: '14px',
-              },
-        }),
-        flag: {
-            borderRadius: '0px',
-        },
-        flagWrapper: {
-            minWidth: '40px',
-        }
-    })
+    // const useStyle = makeStyles({
+    //     title: (props) => ({
+    //         textAlign: 'left',
+    //         fontSize: '20px',
+    //         fontWeight: 'bold',
+    //         fontFamily: 'Roboto,san-serif',
+    //         marginBottom: '10px',
+    //     }),
+    //     number: (props) => ({
+    //         textAlign: 'right',
+    //         '& span': {
+    //             fontSize: '14px',
+    //         }
+    //     }),
+    //     itemWrapper: (props) => ({
+    //         marginBottom: '10px',
+    //         borderRadius: '0px',
+    //         display: 'flex',
+    //         justifyContent: 'space-between',
+    //         alignItems: 'center',
+    //     }),
+    //     fixFlag: {
+    //         display: 'flex',
+    //         flexDirection: 'column',
+    //         alignItems: 'initial',
+    //     },
+    //     text: (props) => ({
+    //         marginTop: '5px',
+    //         '& span': {
+    //             fontSize: '14px',
+    //           },
+    //     }),
+    //     flag: {
+    //         borderRadius: '0px',
+    //     },
+    //     flagWrapper: {
+    //         minWidth: '40px',
+    //     }
+    // })
     const sortedDataByCases = data.sort((a,b) =>( b[type] - a[type] ))
     const createData = ( name,type,flag ) => {
         return { name, type, flag };
