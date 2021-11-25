@@ -3,7 +3,7 @@ import CountrySelector from './components/CountrySelector';
 import Highlight from './components/Highlight';
 import Summary from './components/Summary';
 import { Grid,Container, Typography } from '@material-ui/core';
-import { getCountries, getReportByCountry,getReportByCountryForHighLights} from './apis';
+import { getCountries, getReportByCountry,getReportByCountryForHighLights,getMapDataByCountryId} from './apis';
 import moment from 'moment';
 import 'moment/locale/vi';
 import { TopTen } from './components/TopTen';
@@ -54,14 +54,22 @@ moment.locale('vi');
 
     const [mapData,setMapData] = React.useState({})
     React.useEffect(() => {
-        if(selectedCountryId){
-            import(
-                `@highcharts/map-collection/countries/${selectedCountryId.toLowerCase()}/${selectedCountryId.toLowerCase()}-all.geo.json`
-                ).then(res => {
-                    setMapData(res)
-                }) 
-        }
-    }, [selectedCountryId])
+    //     if(selectedCountryId){
+    //         import(
+    //             `@highcharts/map-collection/countries/${selectedCountryId.toLowerCase()}/${selectedCountryId.toLowerCase()}-all.geo.json`
+    //             ).then(res => {
+    //                 setMapData(res)
+    //             }) 
+    //     }
+    // }, [selectedCountryId])
+    if (selectedCountryId) {
+      getMapDataByCountryId(selectedCountryId)
+        .then((res) => {
+          setMapData(res);
+        })
+        .catch((err) => console.log({ err }));
+    }
+  }, [selectedCountryId]);
 
     return (
         <Container style={{ marginTop: 50, maxWidth:1184}}>
